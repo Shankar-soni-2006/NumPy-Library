@@ -1,0 +1,531 @@
+NUMPY INTERVIEW QUESTIONS AND ANSWERS
+=====================================
+
+BASIC QUESTIONS
+===============
+
+Q1. What is NumPy?
+
+Answer:
+NumPy (Numerical Python) is an open-source Python library used for numerical
+computing. It provides support for multidimensional arrays, mathematical
+operations, linear algebra, statistics, and random number generation.
+
+------------------------------------------------------------
+
+Q2. Why is NumPy faster than Python Lists?
+
+Answer:
+1. Arrays are stored in contiguous memory locations.
+2. Operations are implemented using optimized C code.
+3. Supports vectorized operations.
+4. Uses less memory than Python lists.
+
+------------------------------------------------------------
+
+Q3. Difference between Python List and NumPy Array?
+
+Answer:
+Python List:
+- Slower
+- Uses more memory
+- Can store multiple datatypes
+- Limited mathematical operations
+
+NumPy Array:
+- Faster
+- Memory efficient
+- Homogeneous datatype
+- Supports vectorized operations
+
+------------------------------------------------------------
+
+Q4. What is a Vector?
+
+Answer:
+A one-dimensional array is called a Vector.
+
+------------------------------------------------------------
+
+Q5. What is a Matrix?
+
+Answer:
+A two-dimensional array consisting of rows and columns.
+
+------------------------------------------------------------
+
+Q6. What is a Tensor?
+
+Answer:
+An array with more than two dimensions.
+
+------------------------------------------------------------
+
+Q7. What are shape, ndim, size, and dtype?
+
+Answer:
+
+shape:
+Returns dimensions of an array.
+
+ndim:
+Returns number of dimensions.
+
+size:
+Returns total number of elements.
+
+dtype:
+Returns datatype of elements.
+
+============================================================
+
+ARRAY CREATION QUESTIONS
+========================
+
+Q8. How do you create an array in NumPy?
+
+Answer:
+Using np.array()
+
+------------------------------------------------------------
+
+Q9. What does np.zeros() do?
+
+Answer:
+Creates an array filled with zeros.
+
+------------------------------------------------------------
+
+Q10. What does np.ones() do?
+
+Answer:
+Creates an array filled with ones.
+
+------------------------------------------------------------
+
+Q11. Difference between np.arange() and np.linspace()?
+
+Answer:
+
+np.arange():
+Creates values using a step size.
+
+np.linspace():
+Creates a specified number of equally spaced values.
+
+------------------------------------------------------------
+
+Q12. What is np.full() used for?
+
+Answer:
+Creates an array filled with a constant value.
+
+============================================================
+
+INDEXING AND SLICING QUESTIONS
+==============================
+
+Q13. What is Indexing?
+
+Answer:
+Accessing a specific element using its position.
+
+------------------------------------------------------------
+
+Q14. What is Slicing?
+
+Answer:
+Extracting a subset of elements from an array.
+
+------------------------------------------------------------
+
+Q15. How do you access an entire row?
+
+Answer:
+arr[row, :]
+
+------------------------------------------------------------
+
+Q16. How do you access an entire column?
+
+Answer:
+arr[:, column]
+
+============================================================
+
+RESHAPING QUESTIONS
+===================
+
+Q17. What does reshape() do?
+
+Answer:
+Changes the dimensions of an array without changing the data.
+
+------------------------------------------------------------
+
+Q18. Difference between flatten() and ravel()?
+
+Answer:
+
+flatten():
+Returns a copy of the array.
+
+ravel():
+Returns a view whenever possible.
+
+------------------------------------------------------------
+
+Q19. Which is more memory efficient: flatten() or ravel()?
+
+Answer:
+ravel() because it generally returns a view instead of creating a copy.
+
+============================================================
+
+SORTING QUESTIONS
+=================
+
+Q20. How do you sort an array?
+
+Answer:
+Using np.sort()
+
+------------------------------------------------------------
+
+Q21. What does axis=0 mean?
+
+Answer:
+Column-wise operation.
+
+------------------------------------------------------------
+
+Q22. What does axis=1 mean?
+
+Answer:
+Row-wise operation.
+
+============================================================
+
+FILTERING QUESTIONS
+===================
+
+Q23. What is Boolean Masking?
+
+Answer:
+A technique used to filter elements based on a condition.
+
+------------------------------------------------------------
+
+Q24. What does np.where() do?
+
+Answer:
+Returns indices or values based on a condition.
+
+------------------------------------------------------------
+
+Q25. Difference between Boolean Masking and np.where()?
+
+Answer:
+
+Boolean Masking:
+Returns filtered values.
+
+np.where():
+Returns indices or conditional outputs.
+
+============================================================
+
+MATHEMATICAL OPERATIONS
+=======================
+
+Q26. What is Vectorization?
+
+Answer:
+Performing operations on complete arrays without using explicit loops.
+
+Benefits:
+- Faster execution
+- Cleaner code
+- Better readability
+
+------------------------------------------------------------
+
+Q27. Why is Vectorization important?
+
+Answer:
+It removes Python loops and significantly improves performance.
+
+------------------------------------------------------------
+
+Q28. What is Broadcasting?
+
+Answer:
+Broadcasting allows NumPy to perform operations on arrays having
+different shapes without manually reshaping them.
+
+------------------------------------------------------------
+
+Q29. What are the advantages of Broadcasting?
+
+Answer:
+- Faster computations
+- Less memory usage
+- Simpler code
+
+============================================================
+
+AGGREGATION QUESTIONS
+=====================
+
+Q30. What does sum() do?
+
+Answer:
+Returns the sum of all elements.
+
+------------------------------------------------------------
+
+Q31. What does mean() do?
+
+Answer:
+Returns the average value.
+
+------------------------------------------------------------
+
+Q32. What does cumsum() do?
+
+Answer:
+Returns cumulative sum.
+
+------------------------------------------------------------
+
+Q33. Difference between sum() and cumsum()?
+
+Answer:
+
+sum():
+Returns a single final value.
+
+cumsum():
+Returns cumulative values at each position.
+
+============================================================
+
+LINEAR ALGEBRA QUESTIONS
+========================
+
+Q34. What is Dot Product?
+
+Answer:
+Multiplication of corresponding elements followed by addition.
+
+Formula:
+a·b = a1b1 + a2b2 + a3b3
+
+------------------------------------------------------------
+
+Q35. What is np.linalg.norm()?
+
+Answer:
+Returns the magnitude (length) of a vector.
+
+------------------------------------------------------------
+
+Q36. What is Matrix Multiplication?
+
+Answer:
+Combining rows and columns according to matrix multiplication rules.
+
+Operator:
+@
+
+------------------------------------------------------------
+
+Q37. Difference between * and @ ?
+
+Answer:
+
+*  -> Element-wise multiplication
+
+@  -> Matrix multiplication
+
+============================================================
+
+RANDOM FUNCTIONS QUESTIONS
+==========================
+
+Q38. What is np.random.random()?
+
+Answer:
+Generates random floating-point values between 0 and 1.
+
+------------------------------------------------------------
+
+Q39. What is np.random.randint()?
+
+Answer:
+Generates random integers within a specified range.
+
+------------------------------------------------------------
+
+Q40. Difference between rand() and randn()?
+
+Answer:
+
+rand():
+Uniform distribution.
+
+randn():
+Normal (Gaussian) distribution.
+
+============================================================
+
+FILE HANDLING QUESTIONS
+=======================
+
+Q41. How do you save a NumPy array?
+
+Answer:
+Using np.save()
+
+------------------------------------------------------------
+
+Q42. How do you load a NumPy array?
+
+Answer:
+Using np.load()
+
+============================================================
+
+DATATYPE QUESTIONS
+==================
+
+Q43. What is dtype?
+
+Answer:
+dtype specifies the datatype of array elements.
+
+------------------------------------------------------------
+
+Q44. Why are NumPy arrays homogeneous?
+
+Answer:
+All elements have the same datatype, which improves performance
+and memory efficiency.
+
+------------------------------------------------------------
+
+Q45. What is astype()?
+
+Answer:
+Used to convert one datatype into another datatype.
+
+============================================================
+
+ADVANCED QUESTIONS
+==================
+
+Q46. What is a View?
+
+Answer:
+A view shares memory with the original array.
+Changes affect the original array.
+
+------------------------------------------------------------
+
+Q47. What is a Copy?
+
+Answer:
+A copy creates independent memory.
+Changes do not affect the original array.
+
+------------------------------------------------------------
+
+Q48. Difference between Copy and View?
+
+Answer:
+
+View:
+Shares memory with original array.
+
+Copy:
+Creates separate memory.
+
+------------------------------------------------------------
+
+Q49. What is Contiguous Memory?
+
+Answer:
+Memory locations stored sequentially, allowing faster access
+and processing.
+
+------------------------------------------------------------
+
+Q50. Why is NumPy important in Machine Learning?
+
+Answer:
+1. Fast numerical computations.
+2. Efficient memory usage.
+3. Matrix operations.
+4. Linear algebra support.
+5. Foundation of Pandas, TensorFlow, PyTorch, and Scikit-Learn.
+
+============================================================
+
+TOP 20 MOST ASKED INTERVIEW QUESTIONS
+=====================================
+
+1. What is NumPy?
+2. Why is NumPy faster than Python Lists?
+3. Difference between List and NumPy Array?
+4. What are shape, ndim, size, and dtype?
+5. Difference between arange() and linspace()?
+6. Difference between flatten() and ravel()?
+7. What is Vectorization?
+8. What is Broadcasting?
+9. What is Boolean Masking?
+10. What does np.where() do?
+11. Difference between * and @?
+12. What is Dot Product?
+13. What is np.linalg.norm()?
+14. Difference between Copy and View?
+15. Difference between rand() and randn()?
+16. What is dtype?
+17. What is astype()?
+18. How do you save and load arrays?
+19. What is Contiguous Memory?
+20. Why is NumPy important in Machine Learning?
+
+============================================================
+
+QUICK REVISION
+==============
+
+shape       -> Dimensions
+ndim        -> Number of Dimensions
+size        -> Total Elements
+dtype       -> Datatype
+
+reshape()   -> Change Shape
+flatten()   -> Copy
+ravel()     -> View
+
+sort()      -> Sorting
+
+where()     -> Conditional Selection
+masking     -> Filtering
+
+vectorize() -> Remove Loops
+broadcasting-> Different Shape Operations
+
+dot()       -> Dot Product
+norm()      -> Magnitude
+@           -> Matrix Multiplication
+
+save()      -> Save Array
+load()      -> Load Array
+
+*           -> Element-wise Multiplication
+@           -> Matrix Multiplication
+
+arange()    -> Step Based Sequence
+linspace()  -> Equal Spacing Sequence
