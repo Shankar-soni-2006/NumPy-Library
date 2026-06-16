@@ -1,0 +1,384 @@
+
+================
+1. WHAT IS NUMPY?
+================
+
++----------------------+------------------------------------------------------+
+| Topic                | Description                                          |
++----------------------+------------------------------------------------------+
+| NumPy                | Numerical Python library for numerical computing     |
+| Purpose              | Fast array processing and mathematical operations    |
+| Supports             | Arrays, Matrices, Tensors, Linear Algebra, Statistics|
+| Used In              | Data Science, ML, AI, Scientific Computing           |
++----------------------+------------------------------------------------------+
+
+
+2. WHY NUMPY?
+=============
+
++----------------------+------------------------------------------------------+
+| Advantage            | Description                                          |
++----------------------+------------------------------------------------------+
+| Speed                | Faster than Python Lists                             |
+| Memory Efficient     | Uses less memory                                     |
+| Mathematical Ops     | Supports vectorized calculations                     |
+| Multi-Dimensional    | Supports 1D, 2D, and ND arrays                       |
+| Broadcasting         | Operations on different shaped arrays                |
+| Ecosystem Support    | Base library for Pandas, TensorFlow, etc.            |
++----------------------+------------------------------------------------------+
+
+
+3. ARRAY TYPES
+==============
+
++----------------------+----------------------------------+
+| Type                 | Description                      |
++----------------------+----------------------------------+
+| Vector               | 1-D Array                        |
+| Matrix               | 2-D Array                        |
+| Tensor               | Multi-Dimensional Array          |
++----------------------+----------------------------------+
+
+
+4. NUMPY DATA TYPES
+===================
+
+INTEGER TYPES
+-------------
+
++----------+--------+------------------------------+
+| Datatype | Size   | Use Case                     |
++----------+--------+------------------------------+
+| int8     | 1 Byte | Small values                 |
+| int16    | 2 Byte | Moderate-sized integers      |
+| int32    | 4 Byte | General-purpose integers     |
+| int64    | 8 Byte | Very large integers          |
++----------+--------+------------------------------+
+
+FLOAT TYPES
+-----------
+
++----------+--------+------------------------------+
+| Datatype | Size   | Use Case                     |
++----------+--------+------------------------------+
+| float16  | 2 Byte | Low memory applications      |
+| float32  | 4 Byte | Deep Learning                |
+| float64  | 8 Byte | Scientific Computing         |
++----------+--------+------------------------------+
+
+OTHER TYPES
+-----------
+
++----------+----------------------------------+
+| Datatype | Purpose                          |
++----------+----------------------------------+
+| bool     | True / False values              |
+| str      | Text Data                        |
++----------+----------------------------------+
+
+
+5. ARRAY CREATION FUNCTIONS
+===========================
+
++--------------------------------------+----------------------------------+
+| Function                             | Purpose                          |
++--------------------------------------+----------------------------------+
+| np.array()                           | Create array from data           |
+| np.zeros(shape)                      | Create zero-filled array         |
+| np.ones(shape)                       | Create one-filled array          |
+| np.full(shape,value)                 | Create constant array            |
+| np.random.random(shape)              | Random values (0 to 1)           |
+| np.arange(start,stop,step)           | Sequence generation              |
+| np.linspace(start,stop,num)          | Equal spaced values              |
+| np.where(condition)                  | Conditional array generation     |
++--------------------------------------+----------------------------------+
+
+
+6. ARRAY PROPERTIES
+===================
+
++----------------------+----------------------------------+
+| Property             | Description                      |
++----------------------+----------------------------------+
+| shape                | Dimensions of array             |
+| ndim                 | Number of dimensions            |
+| size                 | Total number of elements        |
+| dtype                | Datatype of elements            |
++----------------------+----------------------------------+
+
+
+7. ARRAY RESHAPING
+==================
+
++----------------------+----------------------------------+
+| Function             | Description                      |
++----------------------+----------------------------------+
+| reshape()            | Change dimensions                |
+| flatten()            | Convert to 1D copy               |
+| ravel()              | Convert to 1D view               |
++----------------------+----------------------------------+
+
+
+8. INDEXING & SLICING
+=====================
+
++----------------------------------+--------------------------+
+| Syntax                           | Purpose                  |
++----------------------------------+--------------------------+
+| arr[row,col]                     | Specific element         |
+| arr[row,:]                       | Specific row             |
+| arr[:,col]                       | Specific column          |
+| arr[start:end]                   | Slice 1D array           |
+| arr[r1:r2,c1:c2]                 | Slice 2D array           |
++----------------------------------+--------------------------+
+
+
+9. SORTING FUNCTIONS
+====================
+
++----------------------+----------------------------------+
+| Function             | Purpose                          |
++----------------------+----------------------------------+
+| np.sort(arr)         | Sort array                       |
+| np.sort(arr,axis=0)  | Sort column-wise                 |
+| np.sort(arr,axis=1)  | Sort row-wise                    |
++----------------------+----------------------------------+
+
+
+10. FILTERING
+=============
+
++------------------------------------+--------------------------+
+| Method                             | Purpose                  |
++------------------------------------+--------------------------+
+| Boolean Masking                    | Filter based on condition|
+| np.where(condition)                | Return matching indices  |
+| np.where(cond,x,y)                 | Conditional values       |
++------------------------------------+--------------------------+
+
+
+11. COMBINING ARRAYS
+====================
+
++---------------------------+----------------------------+
+| Function                  | Purpose                    |
++---------------------------+----------------------------+
+| np.concatenate((a,b))     | Join arrays                |
+| np.vstack((a,b))          | Vertical stacking          |
+| np.hstack((a,b))          | Horizontal stacking        |
++---------------------------+----------------------------+
+
+
+12. MATHEMATICAL OPERATIONS
+===========================
+
++----------------------+------------------+
+| Operation            | Symbol           |
++----------------------+------------------+
+| Addition             | +                |
+| Subtraction          | -                |
+| Multiplication       | *                |
+| Division             | /                |
+| Modulus              | %                |
+| Power                | **               |
++----------------------+------------------+
+
+
+13. AGGREGATION FUNCTIONS
+=========================
+
++----------------------+----------------------------------+
+| Function             | Purpose                          |
++----------------------+----------------------------------+
+| sum()                | Sum of elements                  |
+| min()                | Minimum value                    |
+| max()                | Maximum value                    |
+| mean()               | Average value                    |
+| cumsum()             | Cumulative sum                   |
++----------------------+----------------------------------+
+
+
+14. LINEAR ALGEBRA
+==================
+
++----------------------+----------------------------------+
+| Function             | Purpose                          |
++----------------------+----------------------------------+
+| dot()                | Dot product                      |
+| np.linalg.norm()     | Vector magnitude                 |
+| @                    | Matrix multiplication            |
+| .T                   | Matrix transpose                 |
++----------------------+----------------------------------+
+
+
+15. VECTORIZATION
+=================
+
++----------------------+----------------------------------+
+| Function             | Purpose                          |
++----------------------+----------------------------------+
+| np.vectorize()       | Apply function element-wise      |
++----------------------+----------------------------------+
+
+Benefits:
+- Faster execution
+- Cleaner code
+- Avoids loops
+
+
+16. BROADCASTING
+================
+
++----------------------+----------------------------------+
+| Topic                | Description                      |
++----------------------+----------------------------------+
+| Broadcasting         | Operate on different shapes      |
+| Benefit              | No explicit reshaping needed     |
+| Benefit              | Faster computations              |
+| Benefit              | Less memory usage                |
++----------------------+----------------------------------+
+
+
+17. RANDOM FUNCTIONS
+====================
+
++----------------------+----------------------------------+
+| Function             | Purpose                          |
++----------------------+----------------------------------+
+| random()             | Random float                     |
+| randint()            | Random integer                   |
+| rand()               | Random array                     |
+| randn()              | Normal distribution values       |
++----------------------+----------------------------------+
+
+
+18. UTILITY FUNCTIONS
+=====================
+
++----------------------+----------------------------------+
+| Function             | Purpose                          |
++----------------------+----------------------------------+
+| unique()             | Unique values                    |
+| copy()               | Create copy                      |
+| astype()             | Change datatype                  |
+| len()                | Length of first dimension        |
+| .T                   | Transpose                        |
++----------------------+----------------------------------+
+
+
+19. FILE HANDLING
+=================
+
++----------------------+----------------------------------+
+| Function             | Purpose                          |
++----------------------+----------------------------------+
+| np.save()            | Save array to .npy file          |
+| np.load()            | Load array from .npy file        |
++----------------------+----------------------------------+
+
+
+20. PYTHON LIST VS NUMPY ARRAY
+==============================
+
++-------------------------+----------------+----------------+
+| Feature                 | Python List    | NumPy Array    |
++-------------------------+----------------+----------------+
+| Speed                   | Slower         | Faster         |
+| Memory Usage            | Higher         | Lower          |
+| Mathematical Operations | Limited        | Extensive      |
+| Multi-Dimensional Data  | Limited        | Excellent      |
+| Broadcasting            | Not Supported  | Supported      |
++-------------------------+----------------+----------------+
+
+
+21. MOST IMPORTANT FUNCTIONS
+============================
+
++-------------------+----------------------------------+
+| Category          | Functions                        |
++-------------------+----------------------------------+
+| Creation          | array, zeros, ones, full         |
+| Sequences         | arange, linspace                 |
+| Information       | shape, ndim, size, dtype         |
+| Reshaping         | reshape, flatten, ravel          |
+| Sorting           | sort                             |
+| Filtering         | where                            |
+| Combining         | concatenate, vstack, hstack      |
+| Math              | +, -, *, /, %, **                |
+| Aggregation       | sum, min, max, mean, cumsum      |
+| Linear Algebra    | dot, norm, @, .T                 |
+| Random            | random, randint, rand, randn     |
+| Utilities         | unique, copy, astype             |
+| File Handling     | save, load                       |
++-------------------+----------------------------------+
+
+22. KEY TAKEAWAYS
+================
+
++----+--------------------------------------------------------------+
+| No | Key Point                                                    |
++----+--------------------------------------------------------------+
+| 1  | NumPy is the fundamental library for numerical computing     |
+|    | in Python.                                                   |
++----+--------------------------------------------------------------+
+| 2  | NumPy arrays are faster and more memory-efficient than       |
+|    | Python lists.                                                |
++----+--------------------------------------------------------------+
+| 3  | Supports Vectors (1D), Matrices (2D), and Tensors (ND).      |
++----+--------------------------------------------------------------+
+| 4  | Provides built-in mathematical, statistical, and linear      |
+|    | algebra operations.                                          |
++----+--------------------------------------------------------------+
+| 5  | Broadcasting allows operations on arrays of different        |
+|    | shapes without explicit reshaping.                           |
++----+--------------------------------------------------------------+
+| 6  | Vectorization eliminates most loops and improves            |
+|    | performance significantly.                                   |
++----+--------------------------------------------------------------+
+| 7  | Common array properties are shape, ndim, size, and dtype.   |
++----+--------------------------------------------------------------+
+| 8  | reshape(), flatten(), and ravel() are the most commonly     |
+|    | used reshaping functions.                                    |
++----+--------------------------------------------------------------+
+| 9  | Boolean masking and np.where() are powerful tools for       |
+|    | filtering and conditional operations.                        |
++----+--------------------------------------------------------------+
+| 10 | concatenate(), vstack(), and hstack() are used to combine   |
+|    | arrays.                                                      |
++----+--------------------------------------------------------------+
+| 11 | sum(), min(), max(), mean(), and cumsum() are essential     |
+|    | aggregation functions.                                       |
++----+--------------------------------------------------------------+
+| 12 | dot(), np.linalg.norm(), @, and .T are the most frequently  |
+|    | used linear algebra operations.                              |
++----+--------------------------------------------------------------+
+| 13 | NumPy provides extensive random number generation through   |
+|    | the np.random module.                                        |
++----+--------------------------------------------------------------+
+| 14 | Arrays can be saved and loaded efficiently using            |
+|    | np.save() and np.load().                                     |
++----+--------------------------------------------------------------+
+| 15 | NumPy is the foundation of Data Science, Machine Learning,  |
+|    | Deep Learning, Artificial Intelligence, and Scientific       |
+|    | Computing ecosystems.                                        |
++----+--------------------------------------------------------------+
+
+NUMPY QUICK REVISION
+====================
+
+Array Creation      : array(), zeros(), ones(), full(), arange(), linspace()
+Array Info          : shape, ndim, size, dtype
+Reshaping           : reshape(), flatten(), ravel()
+Sorting             : sort()
+Filtering           : where(), Boolean Masking
+Combining           : concatenate(), vstack(), hstack()
+Math Operations     : +, -, *, /, %, **
+Aggregation         : sum(), min(), max(), mean(), cumsum()
+Linear Algebra      : dot(), norm(), @, .T
+Random Numbers      : random(), randint(), rand(), randn()
+Utilities           : unique(), copy(), astype()
+File Operations     : save(), load()
+
+Remember:
+Python List  -> Multiplication repeats elements
+NumPy Array  -> Multiplication performs element-wise operation
